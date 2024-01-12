@@ -19,6 +19,7 @@ body {
 /* Common paragraph CSS */
 .para {
     color: #727272;
+    font-size: 0.85rem;
     font-weight: 400;
     line-height: 26px;
     margin: 24px 0px;
@@ -36,7 +37,7 @@ body {
     cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: transparent;
     border: 2px solid #FF900E;
     color: #FF900E;
@@ -83,14 +84,49 @@ body {
     font-weight: 700;
 }
 
-.banner-image img{
+.banner-image img {
     width: 100%;
     border-radius: 8px;
 }
 
+/* Team Section CSS */
+.team-section {
+    padding: 64px 180px;
+    display: flex;
+    align-items: center;
+    gap: 57px;
+}
+
+.team-image {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    border-radius: 8px;
+}
+
+.team-image img {
+    width: 256px;
+}
+
+.team-content h2 {
+    font-size: 2.6rem;
+}
+
+.thin-letter {
+    color: #727272;
+    font-weight: 500;
+}
+
+.marked {
+    color: #FF900E;
+    font-weight: 700;
+}
+
 /* Responsive CSS */
-@media screen and (max-width:576px){
-    .navigation{
+@media screen and (max-width:576px) {
+
+    .navigation,
+    .team-section {
         flex-direction: column;
     }
 
@@ -98,7 +134,37 @@ body {
         padding: 50px 10px;
     }
 
-    .semi-heading{
+    .semi-heading {
         margin-bottom: 10px;
+    }
+
+    .team-image {
+        grid-template-columns: 1fr;
+    }
+
+    .team-image img{
+        width: fit-content;
+    }
+
+    .team-section {
+        padding: 50px;
+    }
+}
+
+@media screen and (min-width:576px) and (max-width:992px) {
+    .team-section {
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 50px 90px;
+    }
+
+    .team-image img{
+        width: fit-content;
+    }
+
+    .team-section {
+        padding: 90px;
     }
 }
