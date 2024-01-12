@@ -13,7 +13,6 @@ body {
     color: #131313;
     font-size: 2.33rem;
     font-weight: 700;
-    text-align: center;
 }
 
 /* Common paragraph CSS */
@@ -122,11 +121,78 @@ body {
     font-weight: 700;
 }
 
+/* facts section CSS */
+.facts-section {
+    padding: 50px 180px;
+}
+
+.fact-content {
+    max-width: 500px;
+}
+
+.card-section {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    text-align: center;
+    padding: 33px 40px;
+}
+
+.card h4 {
+    color: #424242;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.card p {
+    color: #727272;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* sponser section CSS */
+.sponser-section {
+    padding: 50px 180px;
+    text-align: center;
+}
+
+.sponser-heading {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.sponser-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sponser-content img {
+    width: 120px;
+}
+
+/* footer section CSS */
+.license {
+    max-width: 1050px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 30px 0;
+    border-radius: 8px;
+    background: #FFF4E7;
+    text-align: center;
+}
+
 /* Responsive CSS */
 @media screen and (max-width:576px) {
 
     .navigation,
-    .team-section {
+    .team-section,
+    .card-section,
+    .sponser-content {
         flex-direction: column;
     }
 
@@ -142,17 +208,35 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .team-image img{
+    .team-image img {
         width: fit-content;
     }
 
     .team-section {
         padding: 50px;
     }
+
+    .facts-section {
+        padding: 50px 15px;
+    }
+
+    .card-section {
+        gap: 10px;
+    }
+
+    .sponser-section {
+        padding: 50px 10px;
+    }
+
+    .sponser-content img {
+        margin: 15px auto;
+    }
+
 }
 
 @media screen and (min-width:576px) and (max-width:992px) {
-    .team-section {
+    .team-section,
+    .sponser-content {
         flex-direction: column;
     }
 
@@ -160,11 +244,36 @@ body {
         padding: 50px 90px;
     }
 
-    .team-image img{
+    .team-image img {
         width: fit-content;
     }
 
     .team-section {
         padding: 90px;
     }
+
+    .facts-section {
+        padding: 50px 90px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .sponser-section {
+        padding: 50px 90px;
+    }
+
+    .sponser-content img {
+        width: 50%;
+        margin: 30px auto;
+    }
+
+    .license {
+        max-width: 900px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        padding: 30px 0;
+    }
+    
 }
